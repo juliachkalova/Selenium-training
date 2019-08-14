@@ -2,13 +2,16 @@ package tests;
 
 import org.junit.After;
 import org.junit.Before;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 /**Base Class for all types of tests.
  Attention! There are the following methods that should be overridden in descendant classes if they require
@@ -17,7 +20,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BaseTestClass {
 
     /*
-
     // 1. Parallel launchin several threads
     public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
@@ -77,6 +79,34 @@ public class BaseTestClass {
     public static WebDriver driver;
     public static WebDriverWait wait;
 
+    boolean isElementPresent(WebDriver driver, By locator) {
+        try {
+            driver.findElement(locator);
+            return true;
+        } catch (InvalidSelectorException ex) {
+            throw ex;
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
+    }
+
+/*
+    // явное ожидание появления элемента
+    boolean isElementPresent(WebDriver driver, By locator) {
+        try {
+            wait.until ((WebDriver d) -> d.findElement(locator));
+            return true;
+        } catch (TimeoutException ex) {
+            return false;
+        }
+    }
+
+ */
+
+    boolean areElementsPresent(WebDriver driver, By locator) {
+        return driver.findElements(locator).size() > 0;
+    }
+
     @Before
     public void start() {
         if (driver != null) {
@@ -87,7 +117,8 @@ public class BaseTestClass {
         // WebDriver chromeDriver = new ChromeDriver();
         // WebDriver ieDriver = new InternetExplorerDriver();
         // WebDriver firefoxDriver = new FirefoxDriver();
-
+        // настройка неявных ожиданий
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
         Runtime.getRuntime().addShutdownHook(
             new Thread(() -> {driver.quit(); driver = null; }));
@@ -98,4 +129,5 @@ public class BaseTestClass {
         // driver.quit();
         // driver = null;
     }
+
 }
