@@ -75,25 +75,19 @@ public class AdminLoginTests extends BaseTestClass {
         driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.name("login")).click();
-        WebElement sideMenu = driver.findElement(By.id("box-apps-menu"));
-        List<WebElement> menus = sideMenu.findElements(By.cssSelector("li#app-"));
-        WebElement menu = driver.findElement(By.cssSelector("li#app-"));
+        List<WebElement> menus = driver.findElements(By.cssSelector("li#app-"));
         for (int i = 1; i <= menus.size(); i++) {
-            menu.click();
+            menus.get(i-1).click();
             Assert.assertTrue(isElementPresent(driver, By.tagName("h1")));
-            WebElement submenu = driver.findElement(By.cssSelector("span.name"));
-            int countSubMenu = driver.findElements(By.cssSelector("span.name")).size();
-            /* if (countSubMenu > 1) {
-                for (int y=1; y<=countSubMenu; y++) {
-                    submenu.click();
+            List<WebElement> submenus = driver.findElements(By.cssSelector("ul#box-apps-menu li.selected ul a"));
+            if (submenus.size() != 0) {
+                for (int y = 1; y <= submenus.size(); y++) {
+                    submenus.get(y-1).click();
                     Assert.assertTrue(isElementPresent(driver, By.tagName("h1")));
-                    submenu = driver.findElement(By.cssSelector("span.name"));
+                    submenus = driver.findElements(By.cssSelector("ul#box-apps-menu li.selected ul a"));
                 }
-
-             */
-            String selectorMenu = "//li(@id='app-' :" + i + 1 + "th child()";
-            menu = driver.findElement(By.xpath(selectorMenu));
+            }
+            menus = driver.findElements(By.cssSelector("li#app-"));
         }
     }
-
 }
