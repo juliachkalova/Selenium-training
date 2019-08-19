@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseTestClass {
 
     /*
-    // 1. Parallel launchin several threads
+    // 1. Parallel launching several threads
     public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
     public WebDriver driver;
@@ -122,6 +122,7 @@ public class BaseTestClass {
         wait = new WebDriverWait(driver, 10);
         Runtime.getRuntime().addShutdownHook(
             new Thread(() -> {driver.quit(); driver = null; }));
+        driver.manage().window().maximize();
     }
 
     @After
