@@ -23,10 +23,12 @@ public class GeozonesTests extends BaseTestClass {
             country.get(i).click();
             WebElement tableZones = driver.findElement(By.cssSelector("table#table-zones"));
             List<WebElement> zonesName = tableZones.findElements(By.xpath("//tr/td[3]"));
-            String strArray[] = new String[(zonesName.size()-2)];
-            for (int l = 0; l < (zonesName.size()-2); l++) {
-                System.out.println(zonesName.get(l+1).getText());
-                strArray[l] = zonesName.get(l+1).getText();
+            String strArray[] = new String[(zonesName.size()-1)];
+            for (int l = 0; l < (zonesName.size()-1); l++) {
+                //System.out.println(zonesName.get(l+1).getText());
+                WebElement dropdown = zonesName.get(l+1);
+                WebElement option = dropdown.findElement(By.cssSelector("select > option[selected]"));
+                strArray[l] = option.getText();
             }
             /* Sort the Array */
             String temp = null;
