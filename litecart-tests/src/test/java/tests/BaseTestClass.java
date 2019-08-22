@@ -113,6 +113,7 @@ public class BaseTestClass {
             return;
         }
         driver = new ChromeDriver();
+        // driver = new FirefoxDriver();
         // driver = new EdgeDriver();
         // WebDriver chromeDriver = new ChromeDriver();
         // WebDriver ieDriver = new InternetExplorerDriver();
