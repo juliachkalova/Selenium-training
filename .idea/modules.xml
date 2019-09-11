@@ -2,13 +2,29 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Developer.Selenium-training.java-example.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Developer.Selenium-training.java-example.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Developer.Selenium-training.java-example.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Developer.Selenium-training.java-example.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Developer.Selenium-training.litecart-tests.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Developer.Selenium-training.litecart-tests.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Developer.Selenium-training.litecart-tests.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Developer.Selenium-training.litecart-tests.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Selenium-training.iml" filepath="$PROJECT_DIR$/.idea/Selenium-training.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Selenium-training.browserStackTest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Selenium-training.browserStackTest.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Selenium-training.browserStackTest.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Selenium-training.browserStackTest.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Selenium-training.java-example.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Selenium-training.java-example.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Selenium-training.java-example.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Selenium-training.java-example.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Selenium-training.litecart-tests.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Selenium-training.litecart-tests.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Selenium-training.litecart-tests.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Selenium-training.litecart-tests.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/browserStackTest.iml" filepath="$PROJECT_DIR$/.idea/modules/browserStackTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/browserStackTest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/browserStackTest.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/browserStackTest.test.iml" filepath="$PROJECT_DIR$/.idea/modules/browserStackTest.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-example.iml" filepath="$PROJECT_DIR$/.idea/modules/java-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-example.main.iml" filepath="$PROJECT_DIR$/.idea/modules/java-example.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-example.test.iml" filepath="$PROJECT_DIR$/.idea/modules/java-example.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/litecart-tests.iml" filepath="$PROJECT_DIR$/.idea/modules/litecart-tests.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/litecart-tests.main.iml" filepath="$PROJECT_DIR$/.idea/modules/litecart-tests.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/litecart-tests.test.iml" filepath="$PROJECT_DIR$/.idea/modules/litecart-tests.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/page-object.iml" filepath="$PROJECT_DIR$/.idea/modules/page-object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/page-object.main.iml" filepath="$PROJECT_DIR$/.idea/modules/page-object.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/page-object.test.iml" filepath="$PROJECT_DIR$/.idea/modules/page-object.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ru-stqa.java-example.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ru-stqa.java-example.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ru-stqa.java-example.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ru-stqa.java-example.test.iml" />
     </modules>

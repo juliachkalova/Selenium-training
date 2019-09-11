@@ -5,6 +5,17 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/browserStackTest" />
+        <option name="gradleJvm" value="11" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/browserStackTest" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/java-example" />
         <option name="gradleJvm" value="11" />
         <option name="modules">
@@ -21,6 +32,17 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/litecart-tests" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/page-object" />
+        <option name="gradleJvm" value="11" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/page-object" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />
