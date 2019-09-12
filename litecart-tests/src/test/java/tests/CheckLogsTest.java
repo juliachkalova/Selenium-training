@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.logging.LogEntry;
 
+import java.lang.reflect.Array;
 import java.util.List;
 
 public class CheckLogsTest extends BaseTestClass {
@@ -17,11 +18,16 @@ public class CheckLogsTest extends BaseTestClass {
         driver.findElement(By.name("login")).click();
         WebElement catalogForm = driver.findElement(By.cssSelector("form[name='catalog_form']"));
         WebElement table = catalogForm.findElement(By.className("dataTable"));
-        List<WebElement> rows = table.findElements(By.xpath("//tr[@class='row']/td[3]/a"));
-        for (int i = 0; i < rows.size(); i++) {
+        List<WebElement> rows = table.findElements(By.xpath("//td/img/following-sibling::a"));
+        for (int i = 0; i < (rows.size()-1); i++) {
+            rows.get(i).click();
             for (LogEntry l : driver.manage().logs().get("browser").getAll()) {
                 System.out.println(l);
             }
+            driver.get("http://localhost/litecart/admin/?app=catalog&doc=catalog&category_id=1");
+            catalogForm = driver.findElement(By.cssSelector("form[name='catalog_form']"));
+            table = catalogForm.findElement(By.className("dataTable"));
+            rows = table.findElements(By.xpath("//td/img/following-sibling::a"));
         }
     }
 }

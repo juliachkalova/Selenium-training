@@ -16,6 +16,7 @@ import java.util.Set;public class Application {
     private RegistrationPage registrationPage;
     private AdminPanelLoginPage adminPanelLoginPage;
     private CustomerListPage customerListPage;
+    private ProductsMainPage productsMainPage;
 
     public Application() {
         driver = new ChromeDriver();
